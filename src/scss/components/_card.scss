@@ -1,0 +1,55 @@
+//============
+// Card
+//============
+@use "../base/typography";
+@use "sass:map";
+@use "../abstracts/index" as helper;
+
+$card-color: #6a7fdb48;
+$card-border: 0.8px;
+$card-title-font: map-get(
+  $map: helper.$fonts,
+  $key: 2,
+);
+
+$card-subtitle-font: map-get(
+  $map: helper.$fonts,
+  $key: "sm1",
+);
+
+.f-card {
+  @include typography.arvo-regular;
+  //   background-color: $card-border;
+  //   min-height: 10em; //testing
+  margin: 10px; //testing
+  border: 1.5px solid rgba(47, 47, 47, 0.5);
+  border-radius: 1.5px 7px 1.5px 7px;
+  padding: 1em;
+  position: relative;
+
+  .f-card-title {
+    margin-bottom: 0.6em;
+    padding-bottom: 0.4em;
+    font-size: map-get($map: $card-title-font, $key: font-size);
+    font-weight: map-get($map: $card-title-font, $key: font-weight);
+    line-height: map-get($map: $card-title-font, $key: line-height);
+    border-bottom: $card-border solid rgba(0, 0, 0, 0.397);
+    .f-card-subtitle {
+      margin-top: 0.8em;
+      margin-left: 1em;
+      font-size: map-get($map: $card-subtitle-font, $key: font-size);
+      font-weight: map-get($map: $card-subtitle-font, $key: font-weight);
+      line-height: map-get($map: $card-subtitle-font, $key: line-height);
+    }
+  }
+
+  .f-card-content {
+    text-align: justify;
+  }
+
+  .f-card-footer {
+    position: absolute;
+    bottom: 1em;
+    text-align: justify;
+  }
+}

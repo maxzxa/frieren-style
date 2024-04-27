@@ -1,0 +1,29 @@
+@use "../base/typography";
+@use "sass:map";
+@use "../abstracts/index" as helper;
+
+$fieldset-border: 0.8px;
+
+.f-fieldset {
+  @include typography.arvo-regular;
+  padding: 1em;
+  border: 1.5px solid rgba(47, 47, 47, 0.5);
+  border-radius: 1.5px 7px 1.5px 7px;
+  padding: 1em;
+  position: relative;
+
+  legend {
+    padding: 0.4em;
+    border: 1.5px solid rgba(47, 47, 47, 0.5);
+    border-radius: 1.5px 7px 1.5px 7px;
+
+    .f-fieldset-legend-icon {
+      margin: 0 0.2em 0 0.2em;
+    }
+  }
+
+  legend:hover {
+    color: rgba(47, 47, 47, 0.5);
+    cursor: pointer;
+  }
+}

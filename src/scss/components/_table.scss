@@ -1,0 +1,46 @@
+@use "../base/typography";
+@use "../abstracts/index" as helper;
+
+$footer-font: map-get(
+  $map: helper.$fonts,
+  $key: "sm1",
+);
+
+.f-table {
+  @include typography.arvo-regular;
+
+  //   margin: 2em; //test
+  border: 1px solid black;
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 1.5px 7px 1.5px 7px;
+
+  thead tr th {
+    border-bottom: 1px solid #000000;
+
+    padding: 0.7em;
+    border-left: 1px solid black;
+  }
+
+  thead tr th:first-child {
+    border-left: 0;
+  }
+
+  td:first-child {
+    border-left: 0;
+  }
+  td {
+    border-left: 1px solid black;
+    padding: 0.7em;
+  }
+
+  tfoot {
+    font-size: map-get($map: $footer-font, $key: font-size);
+    font-weight: map-get($map: $footer-font, $key: font-weight);
+    line-height: map-get($map: $footer-font, $key: line-height);
+  }
+
+  tfoot tr td {
+    border-top: 1px solid black;
+  }
+}

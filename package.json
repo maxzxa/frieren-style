@@ -1,0 +1,21 @@
+{
+  "name": "frieren-style",
+  "description": "Sass libraries for frieren ui framework",
+  "version": "0.0.7",
+  "author": {
+    "name": "Maximiliano Calderon",
+    "email": "max_calderon2@hotmail.com",
+    "url": "https://www.npmjs.com/~maxzxa"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "watch": "sass src/scss/main.scss src/css/style.css --watch",
+    "build": "sass src/scss/main.scss dist/index.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.75.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <script type="module" src="/src/main.ts"></script>
+
+    <button class="f-button f-button-primary" type="button">
+      <i class="f-button-icon iconoir-plus"></i>Enviar
+    </button>
+
+    <div class="f-grid">
+      <div class="f-col">
+        <div class="f-input-text-container">
+          <input
+            ref="input"
+            class="f-input-text"
+            type="text"
+            required
+            v-model="model"
+          />
+          <label v-if="label" class="f-input-label">{{ label }}</label>
+        </div>
+      </div>
+      <div class="f-col">
+        <br />
+        <button class="f-button f-button-info" type="button">Enviar</button>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <table class="f-table">
+      <thead>
+        <tr>
+          <th>Header content 1</th>
+          <th>Header content 2</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td>Footer content 1</td>
+          <td>Footer content 2</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Body content 1</td>
+          <td>Body content 2</td>
+        </tr>
+        <tr>
+          <td>Body content 1</td>
+          <td>Body content 2</td>
+        </tr>
+        <tr>
+          <td>Body content 1</td>
+          <td>Body content 2</td>
+        </tr>
+        <tr>
+          <td>Body content 1</td>
+          <td>Body content 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
